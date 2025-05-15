@@ -42,17 +42,17 @@
             updateSlider();
         }, 10000);
 
-        // Form submission
-        const inquiryForm = document.getElementById('inquiryForm');
+        // // Form submission
+        // const inquiryForm = document.getElementById('inquiryForm');
         
-        inquiryForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+        // inquiryForm.addEventListener('submit', (e) => {
+        //     e.preventDefault();
             
-            // In a real implementation, you would send this data to a server
-            // For now, just show an alert
-            alert('Thank you for your interest in Sunshine Primary School! Our admissions team will contact you shortly.');
-            inquiryForm.reset();
-        });
+        //     // In a real implementation, you would send this data to a server
+        //     // For now, just show an alert
+        //     alert('Thank you for your interest in Sunshine Primary School! Our admissions team will contact you shortly.');
+        //     inquiryForm.reset();
+        // });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
