@@ -50,7 +50,7 @@
             
         //     // In a real implementation, you would send this data to a server
         //     // For now, just show an alert
-        //     alert('Thank you for your interest in Sunshine Primary School! Our admissions team will contact you shortly.');
+        //     alert('Thank you for your interest in Home Science! Our admissions team will contact you shortly.');
         //     inquiryForm.reset();
         // });
 
