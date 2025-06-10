@@ -447,7 +447,7 @@ body {
 
 /* Alert Dialogue box */
 .custom-dialog {
-    background-color: #fff;
+    background-color: #ffffffee;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -457,7 +457,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); /* Centers the dialog */
     z-index: 1000; /* Ensures it's on top */
-    width: 300px;
+    min-width: 300px;
   }
 
   .custom-dialog h2 {
@@ -552,6 +552,13 @@ body {
     .about-image {
         height: 300px;
     }
+    .custom-dialog p {
+    font-size: small;
+  }
+   .custom-dialog {
+    height: 10rem;
+    line-height: 1.2;
+   }
 }
 
 @media (max-width: 480px) {
