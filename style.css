@@ -556,6 +556,7 @@ body {
     font-size: small;
   }
    .custom-dialog {
+    top: 25%;
     height: 10rem;
     line-height: 1.2;
    }
