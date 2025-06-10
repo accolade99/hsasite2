@@ -457,7 +457,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); /* Centers the dialog */
     z-index: 1000; /* Ensures it's on top */
-    min-width: 300px;
+    max-width: 300px;
   }
 
   .custom-dialog h2 {
