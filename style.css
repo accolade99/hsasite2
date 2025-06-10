@@ -501,7 +501,7 @@ body {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: 65px;
         flex-direction: column;
         background-color: #4a6ea9e8;
         width: 100%;
@@ -556,10 +556,14 @@ body {
     font-size: small;
   }
    .custom-dialog {
-    top: 25%;
+    top: 24%;
     height: 10rem;
     line-height: 1.2;
    }
+  .custom-dialog button {
+    padding: 4px 8px;
+    margin-top: -3px;
+  }
 }
 
 @media (max-width: 480px) {
