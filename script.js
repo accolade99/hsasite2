@@ -1,3 +1,20 @@
+// FAQ Functionality
+//Get elements from dom
+const q = document.querySelectorAll('.q');
+const a = document.querySelectorAll('.a');
+const arr = document.querySelectorAll('.arrow');
+
+//Select all q elements
+for(let i = 0; i < q.length; i++) {
+    //Add click event to all q elements
+    q[i].addEventListener('click', ()=> {
+        //open th 'a' element with the 'i' as the clicked 'q' element
+        a[i].classList.toggle('a-opened');
+        //rotate the arr element with the same 'i' as the clicked 'q' element
+        arr[i].classList.toggle('arrow-rotated');
+    }); 
+}
+
 // Alert Dialog Functionality
 function showCustomDialog(message) {
   const dialog = document.getElementById('dialog');
@@ -114,3 +131,4 @@ window.onload = function() {
         // Run animation check on load and scroll
         window.addEventListener('load', animateOnScroll);
         window.addEventListener('scroll', animateOnScroll);
+
