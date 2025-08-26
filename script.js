@@ -1,45 +1,4 @@
-// Image Slider JS
-    const slider = document.querySelector('.slider');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
 
-let currentIndex = 0;
-const totalImages = document.querySelectorAll('.slider img').length;
-
-// Function to update the slider position
-function updateSlider() {
-  const offset = -currentIndex * 100;
-  slider.style.transform = `translateX(${offset}%)`;
-}
-
-// Function to move to the next image
-function nextSlide() {
-  if (currentIndex < totalImages - 1) {
-    currentIndex++;
-  } else {
-    currentIndex = 0; // Loop back to the first image
-  }
-  updateSlider();
-}
-
-// Function to move to the previous image
-function prevSlide() {
-  if (currentIndex > 0) {
-    currentIndex--;
-  } else {
-    currentIndex = totalImages -1; // Loop to the last image
-  }
-  updateSlider();
-}
-
-// Event listener for the next button
-nextBtn.addEventListener('click', nextSlide);
-
-// Event listener for the previous button
-prevBtn.addEventListener('click', prevSlide);
-
-// Automatically slide images every 3 seconds
-setInterval(nextSlide, 5000);
 
 // FAQ Functionality
 //Get elements from dom
@@ -174,5 +133,6 @@ window.onload = function() {
         // Run animation check on load and scroll
         window.addEventListener('load', animateOnScroll);
         window.addEventListener('scroll', animateOnScroll);
+
 
 
