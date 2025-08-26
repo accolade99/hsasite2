@@ -135,62 +135,6 @@ body {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-/* Slider Styling */
-
-.slider-container {
-    position: relative;
-    width: 80%;
-    max-width: 1200px;
-    overflow: hidden;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    margin: 0 auto;
-  }
-  
-  .slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slide {
-    position: relative;
-    width: 100%;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures images cover the area without distortion */
-    display: block;
-  }
-  
-  .caption {
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    transform: translateX(-50%);
-    background-color: #283593;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 20px;
-    text-align: center;
-  }
-  
-  .prev-btn {
-    left: 10px;
-    background-color: #283593;
-  }
-  
-  .next-btn {
-    right: 10px;
-    background-color: #283593;
-  }
-
 
 /* Features Section */
 .features {
@@ -664,15 +608,6 @@ body {
 }
 
 /* Responsive Styles */
-  @media (min-width: 1200px) {
-    .slider-container {
-      max-width: 90%;
-    }
-  
-    .slide img {
-      height: 80vh;
-    }
-  }
 
 @media (max-width: 768px) {
     .navbar-container {
@@ -758,35 +693,6 @@ body {
         margin-top: 5px;
     }
 }
-.slider-container {
-      width: 100%; /* Full width on mobile */
-      border: none; /* Remove border for better appearance */
-      border-radius: 0; /* Remove border radius */
-      height: 60vh; /* Set a fixed height for the slider container */
-    }
-  
-    .slide {
-      height: 60vh; /* Match the height of the container */
-    }
-  
-    .slide img {
-      height: 100%;
-      width: auto; /* Allow width to adjust based on aspect ratio */
-      max-width: 100%; /* Ensure the image doesn't overflow */
-      object-fit: contain; /* Ensure the entire image is visible */
-    }
-  
-    .caption {
-      font-size: 16px; /* Smaller font size for mobile */
-      bottom: 10px; /* Adjust caption position */
-      padding: 8px 16px; /* Smaller padding for mobile */
-    }
-  
-    button {
-      padding: 8px; /* Smaller buttons for mobile */
-      font-size: 16px; /* Smaller font size for buttons */
-    }
-
 @media (max-width: 480px) {
     .hero {
         height: 350px;
@@ -814,6 +720,7 @@ body {
 }
 
  
+
 
 
 
