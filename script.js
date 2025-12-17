@@ -56,7 +56,7 @@ window.onload = function() {
         const testimonialsContainer = document.querySelector('.testimonials-container');
         const dots = document.querySelectorAll('.slider-dot');
         const testimonials = document.querySelectorAll('.testimonial');
-        let currentIndex = 0;
+        var currentIndex = 0;
 
         // Initialize dots
         dots.forEach((dot, index) => {
@@ -133,6 +133,7 @@ window.onload = function() {
         // Run animation check on load and scroll
         window.addEventListener('load', animateOnScroll);
         window.addEventListener('scroll', animateOnScroll);
+
 
 
 
