@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="./logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #283593;
+    color: white;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 15px;
+  }
+
+  .back-home{
+            background-color: #283593; 
+            padding: 5px 20px; 
+            border-radius: 40px; 
+            font-size: 0.8rem;
+            box-shadow: 1px 2px 3px rgb(66, 66, 248); 
+            display: block; 
+            width: fit-content;
+            margin: 4rem auto; 
+            text-align: center;
+        }
+        .back-home a{
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Slider Styling */
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    display: block;
+  }
+  
+  .caption {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    background-color: #283593;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .prev-btn {
+    left: 10px;
+    background-color: #283593;
+  }
+  
+  .next-btn {
+    right: 10px;
+    background-color: #283593;
+  }
+
+.hero, .features, .slider-container, .footer, .faq-section, .contact{
+	width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+ /* Media Query for Large Screens */
+  @media (min-width: 1200px) {
+    .slider-container {
+      max-width: 90%;
+    }
+  
+    .slide img {
+      height: 80vh;
+    }
+  }
+ 
+  @media (max-width: 767px) {
+    .slider-container {
+      width: 100%; /* Full width on mobile */
+      border: none; /* Remove border for better appearance */
+      border-radius: 0; /* Remove border radius */
+      height: 60vh; /* Set a fixed height for the slider container */
+    }
+  
+    .slide {
+      height: 60vh; /* Match the height of the container */
+    }
+  
+    .slide img {
+      height: 100%;
+      width: auto; /* Allow width to adjust based on aspect ratio */
+      max-width: 100%; /* Ensure the image doesn't overflow */
+      object-fit: contain; /* Ensure the entire image is visible */
+    }
+  
+    .caption {
+      font-size: 16px; /* Smaller font size for mobile */
+      bottom: 10px; /* Adjust caption position */
+      padding: 8px 16px; /* Smaller padding for mobile */
+    }
+  
+    button {
+      padding: 8px; /* Smaller buttons for mobile */
+      font-size: 16px; /* Smaller font size for buttons */
+    }
+  }
+
+  </style>
+
+</head>
+<body style="background-color:#dfdafc;">
+  <div class="slider-container">
+    <div class="slider">
+      <div class="slide">
+        <img src="./boyspickBalls.jpg" alt="Image 1">
+        <div class="caption">32nd Annual Sports Festival</div>
+      </div>
+      <div class="slide">
+        <img src="./boysRace.png" alt="Image 2">
+        <div class="caption">PSG Unilag, 2024 (Boys).</div>
+      </div>
+      <div class="slide">
+        <img src="./ecobankChess.jpg" alt="Image 3">
+        <div class="caption">Ecobank Chess Tournament, 2024.</div>
+      </div>
+      <div class="slide">
+        <img src="./footballTeam.jpg" alt="Image 4">
+        <div class="caption">HSANPS Ikoyi Football Team</div>
+      </div>
+      <div class="slide">
+        <img src="./gamingTrophy.jpg" alt="Image 5">
+        <div class="caption">A Generation of Winners</div>
+      </div>
+      <div class="slide">
+        <img src="./girlsRace.png" alt="Image 6">
+        <div class="caption">PSG Unilag, 2024 (Girls).</div>
+      </div>
+      <div class="slide">
+        <img src="./girlsRingrace.jpg" alt="Image 7">
+        <div class="caption">32nd Annual Sports Festival.</div>
+      </div>
+      <div class="slide">
+        <img src="./interhouseSportsTrophy.jpg" alt="Image 8">
+        <div class="caption">Raising Champions</div>
+      </div>
+      <div class="slide">
+        <img src="./martialBand.jpg" alt="Image 9">
+        <div class="caption">HSANPS Ikoyi Martial Band</div>
+      </div>
+      <div class="slide">
+        <img src="./schCompound.jpg" alt="Image 10">
+        <div class="caption">Conducive Learning Environment</div>
+      </div>
+      <div class="slide">
+        <img src="./students.jpg" alt="Image 11">
+        <div class="caption">A Tradition of Research and Discovery</div>
+      </div>
+    </div>
+    <button class="prev-btn">&lt;</button>
+    <button class="next-btn">&gt;</button>
+  </div>
+  <div class="back-home">
+  <a href="index.html">back to home</a>
+  </div>
+
+  <script>
+    // Image Slider JS
+    const slider = document.querySelector('.slider');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let currentIndex = 0;
+const totalImages = document.querySelectorAll('.slider img').length;
+
+// Function to update the slider position
+function updateSlider() {
+  const offset = -currentIndex * 100;
+  slider.style.transform = `translateX(${offset}%)`;
+}
+
+// Function to move to the next image
+function nextSlide() {
+  if (currentIndex < totalImages - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0; // Loop back to the first image
+  }
+  updateSlider();
+}
+
+// Function to move to the previous image
+function prevSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = totalImages -1; // Loop to the last image
+  }
+  updateSlider();
+}
+
+// Event listener for the next button
+nextBtn.addEventListener('click', nextSlide);
+
+// Event listener for the previous button
+prevBtn.addEventListener('click', prevSlide);
+
+// Automatically slide images every 3 seconds
+setInterval(nextSlide, 5000);
+
+  </script>
+</body>
+</html>
