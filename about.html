@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HSA Ikoyi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #c2d9f0;
+            color: #333;
+            line-height: 1.6;
+        }
+        .back-home{
+            background-color: #283593; 
+            padding: 5px 20px; 
+            border-radius: 40px; 
+            font-size: 0.8rem;
+            box-shadow: 1px 2px 3px rgb(66, 66, 248); 
+            display: block; 
+            width: fit-content;
+            margin: 1rem 1rem auto; 
+            text-align: center;
+        }
+        .back-home a{
+            color: white;
+            text-decoration: none;
+        }
+        .back-home:hover{
+            background-color: #121c69;
+        }
+        .header-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(140, 200, 253);
+        border-radius: 20px 20px 0 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        margin: 1rem 7rem 0 7rem;
+        }
+        .header-image img{
+        max-width: 300px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: #283593;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+
+        .foundation-year {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #113a7c;
+            padding: 8px 20px;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
+        /* Main Content */
+        .content-section {
+            background-color: rgb(140, 200, 253);
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            color: #1a5276;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #ffd700;
+            display: inline-block;
+        }
+
+        .history-text p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Branches Section */
+        .branches {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .branch-card {
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #2e86c1;
+        }
+
+        .branch-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .branch-icon {
+            font-size: 2.2rem;
+            color: #1a5276;
+            margin-bottom: 15px;
+        }
+
+        .branch-card h3 {
+            color: #1a5276;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .branch-card.headquarters {
+            border-left-color: #ffd700;
+            background-color: #fff9e6;
+        }
+
+        /* Mission Section */
+        .mission-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .mission-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 4px solid;
+        }
+
+        .mission-card.motto {
+            border-top-color: #1a5276;
+        }
+
+        .mission-card.mission {
+            border-top-color: #2e86c1;
+        }
+
+        .mission-card.slogan {
+            border-top-color: #ffd700;
+        }
+
+        .mission-card i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1a5276;
+        }
+
+        .mission-card h3 {
+            color: #1a5276;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .mission-card p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .highlight {
+            color: #1a5276;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #283593;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ddd;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #ffd700;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .content-section {
+                padding: 25px;
+            }
+            
+            .branches, .mission-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 50px 0;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .foundation-year {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="back-home">
+  <a href="index.html">back to home</a>
+  </div>
+    <div class="header-image">
+            <img src="./readingGirl.png" alt="">
+        </div>
+    <section class="hero">
+        <div class="container">
+            <h2>A Legacy of Learning</h2>
+            <p>The History of Home Science Association Nursery and Primary School, Ikoyi</p>
+            <div class="foundation-year">Established 1965</div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="content-section">
+            <h2 class="section-title">Our History</h2>
+            <div class="history-text">
+                <p>Founded in <span class="highlight">1965</span>, the Home Science Association Nursery and Primary School (HSA) in Ikoyi stands as a testament to a visionary and compassionate ideal: that quality education is a fundamental right, not a privilege. For nearly six decades, our institution has grown from a single schoolroom into a respected educational network, driven not by profit, but by a profound mission to serve.</p>
+                
+                <p>Our story begins in the heart of Ikoyi, Lagos, where a group of dedicated women from Home Science Association identified a crucial need for accessible, high-quality primary education. Incorporated as a <span class="highlight">Non-Governmental Organization (NGO)</span>, the school was built on the belief that a strong educational foundation is the most powerful tool for personal and societal transformation.</p>
+                
+                <p>Guided by our unwavering mission, our reach extended beyond Ikoyi. Today, the Home Science Association family proudly encompasses <span class="highlight">five branches</span>, each serving its community with the same dedication.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Our Branches</h2>
+            <div class="branches">
+                <div class="branch-card headquarters">
+                    <div class="branch-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>Headquarters</h3>
+                    <p>HSA Nursery and Primary School, Ikoyi</p>
+                </div>
+                
+                <div class="branch-card">
+                    <div class="branch-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>Primary Schools</h3>
+                    <p>HSA Nursery and Primary Schools Oko Oba and Ebute Metta campuses</p>
+                </div>
+                
+                <div class="branch-card">
+                    <div class="branch-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Day Care Centre</h3>
+                    <p>Sura branch for our youngest learners</p>
+                </div>
+                
+                <div class="branch-card">
+                    <div class="branch-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Secondary School</h3>
+                    <p>Alakuko campus for higher learning</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Our Guiding Principles</h2>
+            <div class="mission-cards">
+                <div class="mission-card mission">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Our Mission</h3>
+                    <p>Passionate commitment to effective and measurable delivery of primary education to the various strata of society, making educational delivery available at affordable cost.</p>
+                </div>
+                
+                <div class="mission-card motto">
+                    <i class="fas fa-quote-left"></i>
+                    <h3>Our Motto</h3>
+                    <p>"Education - The Best Heritage"</p>
+                </div>
+                
+                <div class="mission-card slogan">
+                    <i class="fas fa-fire"></i>
+                    <h3>Our Slogan</h3>
+                    <p>"Passion for Excellence"</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HSA Ikoyi</h3>
+                    <p>Home Science Association Nursery and Primary School</p>
+                    <p>Founded in 1965 as an NGO</p>
+                    <p>Ikoyi, Lagos, Nigeria</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone"></i> +2348033234149</p>
+                    <p><i class="fas fa-envelope"></i> info@hsaikoyi.edu.ng</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 5 Ojomu (Ruxton) Street, Ikoyi, Lagos, Nigeria</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Academics</a>
+                    <a href="#">Admissions</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Home Science Association Nursery and Primary School, Ikoyi. All Rights Reserved.</p>
+                <p>Education - The Best Heritage | Passion for Excellence</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
